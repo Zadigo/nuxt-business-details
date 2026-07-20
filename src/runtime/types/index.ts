@@ -169,7 +169,7 @@ export type BusinessDetails = EuropeanBusinessDetails & FrenchBusinessDetails & 
    * The alternate names of the business or organization. This can be a single string or an array of strings.
    * @example ["Fenty Beauty", "Fenty"]
    */
-  alternateName?: string | string[]
+  alternateName?: string[]
   /**
    * The date the business or organization was created. This should be in the format YYYY-MM-DD.
    */

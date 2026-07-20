@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   ],
   businessDetails: {
     siteUrl: 'https://example.com',
-    details: {
+    business: {
       name: 'My Business',
       description: 'We provide the best services in town.',
       logo: '/images/logo.png',

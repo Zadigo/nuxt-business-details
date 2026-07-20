@@ -1,13 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { useWorkingDaysComposable } from '../../layers/base/app/composables/business/working_hours'
+import { isRef, toValue } from 'vue'
+import { useWorkingDaysComposable } from  '../src/runtime/composables'
 
-describe.skip('Tests for useWorkingDaysComposable', () => {
+describe.todo('Tests for useWorkingDaysComposable', () => {
   it('should return correct working days for Weekdays option', () => {
-    const { workingDays } = useWorkingDaysComposable({
-      only: 'Weekdays',
-      startTime: '09:00',
-      endTime: '17:00'
-    })
+    const { workingDays } = useWorkingDaysComposable()
 
     expect(workingDays).toBeDefined()
     expect(isRef(workingDays)).toBe(true)
@@ -22,11 +19,7 @@ describe.skip('Tests for useWorkingDaysComposable', () => {
   })
 
   it('should return correct working days for Weekdays option', () => {
-    const { days } = useWorkingDaysComposable({
-      only: 'Weekdays',
-      startTime: '09:00',
-      endTime: '17:00'
-    })
+    const { days } = useWorkingDaysComposable()
 
     expect(days).toBeDefined()
     expect(isRef(days)).toBe(true)
@@ -35,11 +28,7 @@ describe.skip('Tests for useWorkingDaysComposable', () => {
   })
 
   it('should be able to get a working day', () => {
-    const { getDay } = useWorkingDaysComposable({
-      only: 'Weekdays',
-      startTime: '09:00',
-      endTime: '17:00'
-    })
+    const { getDay } = useWorkingDaysComposable()
 
     expect(getDay).toBeDefined()
     expect(typeof getDay).toBe('function')

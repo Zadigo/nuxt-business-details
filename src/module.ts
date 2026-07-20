@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addImports, addComponent } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addImports, addComponent } from '@nuxt/kit'
 import { defu } from 'defu'
 import type { BusinessDetails, WorkingDaysOptions } from './runtime/types'
 
@@ -59,7 +59,7 @@ export default defineNuxtModule<ModuleOptions>({
       founderImage: undefined,
       logo: '-',
       image: [],
-      alternateName: [],
+      alternateName: undefined,
       cloudProvider: {
         address: '-',
         description: '-',
