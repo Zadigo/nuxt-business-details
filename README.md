@@ -7,22 +7,25 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# Nuxt Business Details
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
+[npm version][npm-version-href]
+[npm downloads][npm-downloads-href]
+[License][license-href]
+[Nuxt][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+Nuxt Business Details is a Nuxt module that provides a set of components and composables to easily manage and display business or organization details, including working days and hours.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+
+<!-- - [📖  Documentation](https://example.com) -->
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
+
 - ⛰ &nbsp;Foo
 - 🚠 &nbsp;Bar
 - 🌲 &nbsp;Baz
@@ -32,18 +35,17 @@ My new Nuxt module for doing amazing things.
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxt module add my-module
+npx nuxt module add nuxt-business-details
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
-
+That's it! You can now use Nuxt Business Details in your Nuxt app ✨
 
 ## Contribution
 
 <details>
   <summary>Local development</summary>
-  
-  ```bash
+
+```bash
   # Install dependencies
   npm install
   
@@ -65,20 +67,17 @@ That's it! You can now use My Module in your Nuxt app ✨
   
   # Release new version
   npm run release
-  ```
+```
 
 </details>
 
-
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/my-module
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npm.chart.dev/my-module
-
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/my-module
-
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-business-details/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/nuxt-business-details
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-business-details.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/nuxt-business-details
+[license-src]: https://img.shields.io/npm/l/nuxt-business-details.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/nuxt-business-details
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt
 [nuxt-href]: https://nuxt.com
