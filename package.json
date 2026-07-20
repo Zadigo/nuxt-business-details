@@ -1,0 +1,86 @@
+{
+  "name": "nuxt-business-details",
+  "version": "1.0.0",
+  "description": "Nuxt Business Details is a module that provides a set of components and utilities for managing and displaying business details in Nuxt applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zadigo/nuxt-business-details.git"
+  },
+  "author": {
+    "name": "John Pendenque",
+    "email": "pendenquejohn@gmail.com"
+  },
+  "keywords": [
+    "seo",
+    "business",
+    "nuxt",
+    "business information"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "workspaces": [
+    "playground"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "npm run dev:prepare && nuxt dev playground",
+    "dev:build": "nuxt build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release:major": "npm run lint && npm run test && npm run prepack && changelogen --release --major && npm publish && git push --follow-tags",
+    "release:minor": "npm run lint && npm run test && npm run prepack && changelogen --release --minor && npm publish && git push --follow-tags",
+    "release:patch": "npm run lint && npm run test && npm run prepack && changelogen --release --patch && npm publish && git push --follow-tags",
+    "lint": "oxlint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch --coverage",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
+    "test:release": "npm run lint & npm run test && npm run prepack && changelogen --release --patch --no-commit --no-tag"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.5.0",
+    "@vueuse/components": "^14.3.0",
+    "@vueuse/core": "^14.3.0",
+    "@vueuse/integrations": "^14.3.0",
+    "@vueuse/math": "^14.3.0",
+    "defu": "^6.1.7"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^3.2.4",
+    "@nuxt/eslint-config": "^1.16.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.5.0",
+    "@nuxt/test-utils": "^4.0.3",
+    "@nuxt/ui": "^4.10.0",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "latest",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vue/test-utils": "^2.4.11",
+    "changelogen": "^0.6.2",
+    "eslint": "^10.7.0",
+    "nuxt": "^4.5.0",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.25.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.7"
+  }
+}
